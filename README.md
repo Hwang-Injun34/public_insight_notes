@@ -1,6 +1,6 @@
 # 📁 Public Insight 노트
 
-> 정책 데이터를 “검색”이 아닌 **관계 기반 탐색**으로 전환한 플랫폼  
+> 정책을 '검색'하는 것이 아니라, **연결된 맥락 속에서 탐색하는 경험을 제공하는 플랫폼**  
 > 지식 그래프 기반 정책 데이터 서비스 **PublicInsight**의 구조, 기술 스택, 핵심 구현을 정리한 프로젝트 문서
 
 ---
@@ -10,10 +10,13 @@
 - 개발 기간: 2025.04 ~ 2025.11
 - 수상 내역: 2025 캡스톤디자인 학술제 최우수상 수상 (전체 00팀 중 상위 %)
 - 서비스: https://public-insight.co.kr/
-- 시연 영상: https://youtu.be/ToBQldXWTEY
 
-🔗 GitHub  
-- https://github.com/Hwang-Injun34/public_insight
+
+▶️ **시연 영상**: 
+- [PublicInsight 시연 영상](https://youtu.be/ToBQldXWTEY)
+
+🔗 **GitHub 저장소**  
+- [public_insight](https://github.com/Hwang-Injun34/public_insight)
 
 ---
 
@@ -103,6 +106,13 @@ PublicInsight는 수집된 정책 데이터를 지식 그래프로 변환하고,
 
 ---
 
+## 📈 기대 효과 및 결과
+- 키워드 검색 중심 서비스 대비 더 직관적인 정책 탐색 경험 제공
+- 정책 간 숨겨진 관계를 발견할 수 있는 탐색 구조 구현
+- 긴 정책 문서를 요약하여 정보 접근 시간 단축
+
+---
+
 ## 👤 역할 분담
 
 ### 👤 남궁명수
@@ -110,43 +120,44 @@ PublicInsight는 수집된 정책 데이터를 지식 그래프로 변환하고,
 - Docker / Nginx 기반 배포 환경 구성
 - FastAPI 백엔드 아키텍처 설계
 - JWT 인증 및 미들웨어 구현
-- 정책 데이터 크롤링 및 수집 파이프라인 구현
+- 정책 데이터 크롤링 및 수집 파이프라인 구축
 - Elasticsearch 기반 검색 시스템 설계 및 구현
 - 사용자 / 관리자 기능 개발
 
-🔗 GitHub  
-- 개인 역할 총 정리 및 회고 (추가 예정)
+🔗 **GitHub 저장소**  
+- 추가 예정
 
 ---
 
 ## 🛠 기술 스택
 
 ### Backend
-- FastAPI
-- SQLAlchemy
+- FastAPI: 비동기 처리를 기반으로 고성능 API 서버 구축
+- SQLAlchemy: Pythonic한 ORM을 활용한 데이터베이스 추상화 및 생산성 향상
+- APScheduler: 데이터 수집(ETL) 및 ML 파이프라인의 주기적 실행 자동화
 
 ### Frontend
-- Next.js
-- TypeScript
+- Next.js(React): 서버 사이드 렌더링(SSR)을 통한 빠른 초기 로딩 및 SEO 최적화
+- TypeScript: 정적 타입 기반으로 코드 안정성 및 유지보수성 향상
+- Tailwind CSS: Utility-First 방식으로 빠르고 일관된 UI 개발
 
 ### Database
-- MySQL
-- Neo4j (Graph DB)
+- MySQL: 사용자 정보 및 서비스 핵심 데이터를 저장하는 관계형 데이터베이스
+- Neo4j: 정책 간 관계를 표현하고 탐색하기 위한 그래프 데이터베이스
 
 ### Search & Cache
-- Elasticsearch
-- Redis
+- Elasticsearch: 정책 데이터에 대한 빠른 전문 검색 및 사용자 검색 로그 분석
+- Redis: 인증 토큰 관리 및 캐싱을 통한 응답 속도 개선
 
 ### AI / ML
-- Node2Vec
-- KoBART
-- Scikit-learn
-- Kiwi
+- Node2Vec: 그래프 구조를 벡터로 변환하여 정책 간 유사도 계산
+- KoBART: 한국어 정책 문서 요약을 위한 사전 학습된 생성 모델
+- Scikit-learn / Kiwi: TF-IDF 기반 키워드 추출 및 텍스트 전처리
 
-### Infrastructure
-- Docker
-- Docker Compose
-- Nginx
+### Infrastructure & Monitoring
+- Docker: 모든 서비스를 컨테이너화하여 일관된 배포 환경 구축
+- Nginx: 리버스 프록시 및 정적 파일 서빙
+- Kibana / Grafana: 로그 및 시스템 메트릭을 시각화하여 서비스 상태 모니터링
 
 ---
 
