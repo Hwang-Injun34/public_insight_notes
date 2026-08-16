@@ -232,7 +232,7 @@ PublicInsight는 여러 기관에서 수집한 정책 데이터를 전처리한 
 
 ### 🔗 GitHub 저장소
 
-- [public_insight](https://github.com/Hwang-Injun34/public_insight)
+- [public_insight](https://github.com/Hwang-Injun34/public_insight_notes/blob/main/%E1%84%80%E1%85%B5%E1%86%BA%E1%84%92%E1%85%A5%E1%84%87%E1%85%B3_%E1%84%89%E1%85%A5%E1%86%AF%E1%84%86%E1%85%A7%E1%86%BC%E1%84%89%E1%85%A5.pdf)
 
   
 ---
